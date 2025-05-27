@@ -1,8 +1,15 @@
 
 import { Button } from "@/components/ui/button";
-import { MessageSquare, Phone } from "lucide-react";
+import { MessageSquare } from "lucide-react";
 
 const Hero = () => {
+  const scrollToWaitlist = () => {
+    const waitlistSection = document.getElementById('waitlist');
+    if (waitlistSection) {
+      waitlistSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <section className="bg-gradient-to-br from-blue-50 to-indigo-100 min-h-screen flex items-center justify-center px-4">
       <div className="max-w-6xl mx-auto grid lg:grid-cols-2 gap-12 items-center">
@@ -16,7 +23,11 @@ const Hero = () => {
             Connect your accounting software and ask questions in plain English.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-            <Button size="lg" className="bg-blue-600 hover:bg-blue-700 text-lg px-8 py-4">
+            <Button 
+              size="lg" 
+              className="bg-blue-600 hover:bg-blue-700 text-lg px-8 py-4"
+              onClick={scrollToWaitlist}
+            >
               <MessageSquare className="mr-2 h-5 w-5" />
               Join Waitlist
             </Button>
