@@ -16,13 +16,91 @@ const ChatExample = () => {
         </div>
         
         <div className="grid lg:grid-cols-2 gap-12 items-center">
-          <div className="relative">
-            <img 
-              src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
-              alt="Business owner using mobile device" 
-              className="rounded-2xl shadow-xl w-full"
-            />
-            <div className="absolute inset-0 bg-blue-600 bg-opacity-10 rounded-2xl"></div>
+          <div className="relative flex justify-center">
+            <div className="relative">
+              {/* Phone Frame */}
+              <div className="w-80 h-[600px] bg-black rounded-[3rem] p-2 shadow-2xl">
+                <div className="w-full h-full bg-white rounded-[2.5rem] overflow-hidden">
+                  {/* WhatsApp Header */}
+                  <div className="bg-green-600 px-4 py-3 flex items-center justify-between">
+                    <div className="flex items-center gap-3">
+                      <div className="w-8 h-8 bg-green-500 rounded-full flex items-center justify-center">
+                        <MessageSquare className="w-4 h-4 text-white" />
+                      </div>
+                      <div>
+                        <h3 className="text-white font-semibold text-sm">datatalks.live</h3>
+                        <p className="text-green-100 text-xs">Online</p>
+                      </div>
+                    </div>
+                    <div className="flex gap-4">
+                      <Phone className="w-5 h-5 text-white" />
+                      <div className="w-1 h-1 bg-white rounded-full"></div>
+                      <div className="w-1 h-1 bg-white rounded-full"></div>
+                      <div className="w-1 h-1 bg-white rounded-full"></div>
+                    </div>
+                  </div>
+                  
+                  {/* Chat Messages */}
+                  <div className="flex-1 bg-gray-50 px-4 py-6 space-y-4 min-h-[500px]">
+                    {/* User Message */}
+                    <div className="flex justify-end">
+                      <div className="bg-green-500 text-white rounded-2xl rounded-br-md px-4 py-3 max-w-xs">
+                        <p className="text-sm">How were my bakery's sales last week?</p>
+                        <div className="text-xs text-green-100 mt-1 text-right">2:14 PM</div>
+                      </div>
+                    </div>
+                    
+                    {/* AI Response */}
+                    <div className="flex justify-start">
+                      <div className="bg-white border rounded-2xl rounded-bl-md px-4 py-3 max-w-xs shadow-sm">
+                        <p className="text-sm text-gray-800">
+                          You made $4,320 in total sales, up 12% from the previous week. 🍰
+                        </p>
+                        <p className="text-sm text-gray-800 mt-2">
+                          Your best-selling items were chocolate croissants and birthday cakes.
+                        </p>
+                        <div className="text-xs text-gray-500 mt-1">2:14 PM</div>
+                      </div>
+                    </div>
+                    
+                    {/* User Follow-up */}
+                    <div className="flex justify-end">
+                      <div className="bg-green-500 text-white rounded-2xl rounded-br-md px-4 py-3 max-w-xs">
+                        <p className="text-sm">What about my expenses?</p>
+                        <div className="text-xs text-green-100 mt-1 text-right">2:15 PM</div>
+                      </div>
+                    </div>
+                    
+                    {/* AI Response 2 */}
+                    <div className="flex justify-start">
+                      <div className="bg-white border rounded-2xl rounded-bl-md px-4 py-3 max-w-xs shadow-sm">
+                        <p className="text-sm text-gray-800">
+                          Your total expenses were $2,890 last week. Main costs: ingredients ($1,200), rent ($800), utilities ($390).
+                        </p>
+                        <p className="text-sm text-gray-800 mt-2">
+                          Net profit: $1,430 💰
+                        </p>
+                        <div className="text-xs text-gray-500 mt-1">2:15 PM</div>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  {/* Input Area */}
+                  <div className="bg-white border-t px-4 py-3 flex items-center gap-3">
+                    <div className="flex-1 bg-gray-100 rounded-full px-4 py-2">
+                      <p className="text-sm text-gray-500">Type a message...</p>
+                    </div>
+                    <div className="w-8 h-8 bg-green-500 rounded-full flex items-center justify-center">
+                      <MessageSquare className="w-4 h-4 text-white" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              {/* Decorative Elements */}
+              <div className="absolute -top-4 -right-4 w-16 h-16 bg-gradient-to-br from-blue-400 to-purple-500 rounded-full opacity-20"></div>
+              <div className="absolute -bottom-4 -left-4 w-12 h-12 bg-gradient-to-br from-green-400 to-blue-500 rounded-full opacity-20"></div>
+            </div>
           </div>
           
           <div className="space-y-6">
